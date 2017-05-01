@@ -4,7 +4,7 @@ const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 const {resolve} = require('path')
-const passport = require('passport')
+// const passport = require('passport')
 const PrettyError = require('pretty-error')
 const finalHandler = require('finalhandler')
 // PrettyError docs: https://www.npmjs.com/package/pretty-error
@@ -45,8 +45,8 @@ module.exports = app
   .use(bodyParser.json())
 
   // Authentication middleware
-  .use(passport.initialize())
-  .use(passport.session())
+  // .use(passport.initialize())
+  // .use(passport.session())
 
   // Serve static files from ../public
   .use(express.static(resolve(__dirname, '..', 'public')))
